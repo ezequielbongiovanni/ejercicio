@@ -33,7 +33,7 @@ button:hover{
     background-color: rgb(101, 33, 165);
 }
 
-.container{
+.conteiner{
     max-width: 1400px;
     margin: auto;
 }
@@ -50,11 +50,20 @@ header{
     font-size: 1.6em;
 }
 
-header.container {
+/* <header class="conteiner"></header>
+
+<header>
+    <x class="conteiner">
+        <div>
+            <p class="conteiner"></p>
+        </div>
+    </x>
+</header> */
+
+header .conteiner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     }
 
     header nav{
@@ -112,17 +121,13 @@ header.container {
     text-align: center;
     }
     
-    #nuestros-programas.container{
+    #nuestros-programas.cartas{
     padding: 150px 12px;
     }
     
     #nuestros-programas h2{
         margin-top: 0;
         font-size: 3.2em;
-    }
-    
-    #nuestros-programas p{
-        display: none;
     }
     
     #nuestros-progrmas.carta{
@@ -132,14 +137,39 @@ header.container {
         margin:30px;
         border-radius: 15px;  
     }
-    
-    .carta:first-child{
-        background-image: linear-gradient(
-            0deg,
-            rgba(0,0,0,0.5),
-            rgba(0,0,0,0.5)
-        )
-        ,url("adultos.jpg");
+
+    .nueva-carta {
+        position: relative;
+        max-width: 440px;
+        margin: auto;
+    }
+
+    .nueva-carta__img-container {
+        position: relative;
+        height: 100%;
+    }
+
+    .nueva-carta__img-container img {
+        filter: brightness(50%);
+    }
+
+    .nueva-carta__floating-text {
+        position: absolute;
+        margin: 1rem;
+        top: 0;
+        height: 100%;
+    }
+
+    .nueva-carta__floating-text h3,
+    .nueva-carta__floating-text p {
+        margin-bottom: 1em;
+    }
+
+    .nueva-carta__img-container form {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        translate: -50% 0;
     }
     
     .carta:nth-child(2){
@@ -159,7 +189,7 @@ header.container {
         ,url("media/hero.jpg");
     }
     
-    #caracteristicas.container{
+    #caracteristicas.descripcion{
     text-align: center;
     padding: 200px 12px;
     }
@@ -408,27 +438,8 @@ header.container {
         .footer-distributed .footer-center i {
             margin-left: 0;
         }
-         
-    /*#final{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: rgb(30,30,30);
-        color: white;
-        height: 80vh;
     }
-    
-    #final h2{
-        font-size: 9vw;
-    }
-    footer{
-        background-color: rgb(230,230,230);
-    
-    }
-    
-
+  
     
 
 
